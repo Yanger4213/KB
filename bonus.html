@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonus Celebration Moments | Happy Birthday Kenei</title>
+  <meta name="description" content="Exclusive bonus gallery showcasing 4 cherished celebration moments for Kenei's birthday milestone.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bikramghar-page-body">
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="quotes-glow-orb orb-1"></div>
+  <div class="quotes-glow-orb orb-2"></div>
+
+  <!-- Header Navigation -->
+  <header class="gang-page-header">
+    <div class="container gang-nav-container">
+      <a href="index.html" class="gang-back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Back to Store</span>
+      </a>
+
+      <div class="gang-header-actions">
+        <a href="quotes.html" class="btn btn-secondary btn-sm">
+          <span>💬 Your Quotes</span>
+        </a>
+        <a href="bikramghar.html" class="btn btn-secondary btn-sm">
+          <span>👑 Bikramghar gang</span>
+        </a>
+        <button class="btn btn-primary btn-sm celebrate-trigger-btn" id="bonus-confetti-btn">
+          <span>🎉 Pop Fireworks!</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="gang-main-content">
+    <div class="container">
+      <!-- Title & Hero Tribute Banner -->
+      <section class="gang-hero-section text-center">
+        <div class="gang-badge-pill">
+          ✨ EXCLUSIVE BIRTHDAY SURPRISE &bull; BONUS ARCHIVE
+        </div>
+        
+        <div class="gang-crest-emojis">🎁✨💗</div>
+        <h1 class="gang-title">Special Bonus Moments</h1>
+        <p class="gang-tagline">“Cherished highlights and extra celebration memories for Kenei”</p>
+      </section>
+
+      <!-- 4 Images Grid Showcase -->
+      <section class="gang-gallery-section">
+        <div class="gang-gallery-grid bonus-4-grid" id="bonus-gallery-grid">
+          <!-- Item 1 -->
+          <article class="gang-photo-card" data-index="1">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#1</span>
+              <img src="assets/images/bonus-1.jpg" onerror="this.onerror=null; this.src='assets/images/bonus-1.svg';" alt="Bonus Moment 1" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Bonus Moment 1</h3>
+            </div>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="gang-photo-card" data-index="2">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#2</span>
+              <img src="assets/images/bonus-2.jpg" onerror="this.onerror=null; this.src='assets/images/bonus-2.svg';" alt="Bonus Moment 2" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Bonus Moment 2</h3>
+            </div>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="gang-photo-card" data-index="3">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#3</span>
+              <img src="assets/images/bonus-3.jpg" onerror="this.onerror=null; this.src='assets/images/bonus-3.svg';" alt="Bonus Moment 3" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Bonus Moment 3</h3>
+            </div>
+          </article>
+
+          <!-- Item 4 -->
+          <article class="gang-photo-card" data-index="4">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#4</span>
+              <img src="assets/images/bonus-4.jpg" onerror="this.onerror=null; this.src='assets/images/bonus-4.svg';" alt="Bonus Moment 4" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Bonus Moment 4</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Bottom Tribute -->
+      <section class="gang-footer-tribute text-center">
+        <div class="gang-tribute-inner">
+          <h2>Forever Blessed &bull; Happy Birthday Kenei!</h2>
+          <p>Every chapter with you is filled with unforgettable warmth, laughter, and timeless celebrations.</p>
+          <div class="gang-action-btns">
+            <a href="index.html" class="btn btn-primary btn-lg">
+              <span>← Back to Celebration Boutique</span>
+            </a>
+            <a href="bikramghar.html" class="btn btn-secondary btn-lg">
+              <span>👑 Bikramghar Gang (10 Moments)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Bottom Options Bar: Home, Your Quotes, Bikramghar gang, Bonus -->
+  <footer class="site-footer-options" id="bottom-options">
+    <div class="container footer-options-container">
+      <nav class="bottom-nav-options" aria-label="Bottom Navigation">
+        <a href="index.html" class="bottom-option-btn" id="opt-home">
+          <span class="option-icon">🏠</span>
+          <span class="option-label">Home</span>
+        </a>
+        <a href="quotes.html" class="bottom-option-btn" id="opt-quotes">
+          <span class="option-icon">💬</span>
+          <span class="option-label">Your Quotes</span>
+        </a>
+        <a href="bikramghar.html" class="bottom-option-btn" id="opt-bikramghar">
+          <span class="option-icon">👑</span>
+          <span class="option-label">Bikramghar gang</span>
+        </a>
+        <a href="bonus.html" class="bottom-option-btn active" id="opt-bonus">
+          <span class="option-icon">🎁</span>
+          <span class="option-label">Bonus</span>
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Confetti button
+    const confettiBtn = document.getElementById('bonus-confetti-btn');
+    if (confettiBtn) {
+      confettiBtn.addEventListener('click', () => {
+        if (typeof confetti !== 'undefined') confetti.rain();
+        if (typeof audioPlayer !== 'undefined') audioPlayer.playChime();
+      });
+    }
+
+    // Auto-fire celebratory confetti on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        if (typeof confetti !== 'undefined') confetti.rain();
+      }, 500);
+    });
+  </script>
+</body>
+</html>

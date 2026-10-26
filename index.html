@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Kenei | Luxury Celebration Boutique & Memories</title>
+  <meta name="description" content="Happy Birthday Kenei - The ultimate celebration boutique offering unforgettable birthday memories and moments for Kenei.">
+  
+  <!-- Google Fonts for Luxury & Celebration Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Canvas for Celebration Confetti -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Notification Banner -->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="container announcement-content">
+      <span class="announcement-tag">✨ SPECIAL EVENT</span>
+      <span class="announcement-text">
+        Celebrating <strong>Happy Birthday Kenei</strong>! Use code <span class="promo-code-badge" id="copy-promo-banner" title="Click to copy code">KENEIBDAY</span> for <strong>25% OFF</strong> + Complimentary Gold Gift Packaging!
+      </span>
+      <button class="announcement-close" id="close-announcement" aria-label="Close Announcement">&times;</button>
+    </div>
+  </div>
+
+  <!-- Primary Header & Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" id="brand-logo">
+        <div class="logo-sparkle-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 12v10H4V12"></path>
+            <path d="M2 7h20v5H2z"></path>
+            <path d="M12 22V7"></path>
+            <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+            <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Happy Birthday Kenei</span>
+          <span class="brand-sub">The Celebration Boutique</span>
+        </div>
+      </a>
+
+      <!-- Quick Search Bar -->
+      <div class="header-search">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="global-search" placeholder="Search memories for Kenei..." aria-label="Search memories">
+        <button id="clear-search" class="clear-search-btn" style="display:none;" aria-label="Clear Search">&times;</button>
+      </div>
+
+      <!-- Action Icons (Cart) -->
+      <div class="header-actions">
+        <!-- Cart Button -->
+        <button class="action-btn cart-btn-highlight" id="open-cart-btn" title="Open shopping cart" aria-label="Shopping Cart">
+          <div class="icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="badge-count" id="cart-badge">0</span>
+          </div>
+          <span class="cart-total-pill" id="header-cart-total">$0.00</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Banner Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-glow-orb hero-glow-1"></div>
+      <div class="hero-glow-orb hero-glow-2"></div>
+      
+      <div class="container hero-content">
+        <h1 class="hero-title">
+          Celebrate Kenei with <span class="highlight-gold">Timeless Luxury</span>
+        </h1>
+        <div class="hero-subtitle hero-wishes-box">
+          <p class="hero-wish-lead">Happy Birthday, Kenei! ✨</p>
+          <p class="hero-wish-body">May your special day be filled with timeless elegance, endless happiness, and the kind of luxury that makes every moment unforgettable. May this new chapter of your life bring you beautiful surprises, extraordinary achievements, genuine love, and countless reasons to smile. May you continue to shine brighter with every passing year, surrounded by the people and moments that make life truly precious.</p>
+          <p class="hero-wish-closing">Wishing you a birthday as exquisite, radiant, and extraordinary as you are. Here's to a year of dreams fulfilled, memories cherished, and a life filled with timeless magic. 🥂💗</p>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="#catalog-section" class="btn btn-primary" id="explore-shop-btn">
+            <span>Explore Collection</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <button class="btn btn-secondary celebrate-trigger-btn" id="hero-celebrate-btn">
+            <span>🎉 Pop Confetti for Kenei!</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Products Catalog Section -->
+    <section class="section catalog-section" id="catalog-section">
+      <div class="container">
+        <!-- Catalog Header -->
+        <div class="catalog-toolbar">
+          <div class="toolbar-left">
+            <h2 class="catalog-heading" id="catalog-heading">Celebration Memories</h2>
+            <span class="item-count-badge" id="results-count">Showing 4 memories</span>
+          </div>
+        </div>
+
+        <!-- Products Grid Container -->
+        <div class="products-grid" id="products-grid">
+          <!-- Dynamically populated via app.js -->
+        </div>
+
+        <!-- No Results Empty State -->
+        <div class="no-results" id="no-results" style="display:none;">
+          <div class="no-results-icon">🔍</div>
+          <h3>No matching birthday gifts found</h3>
+          <p>Try clearing your search query to see all gifts.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <!-- Wishlist Drawer -->
+  <div class="drawer-backdrop" id="wishlist-drawer" aria-hidden="true">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div class="drawer-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <h3>Saved Favorites (<span id="wishlist-count-title">0</span>)</h3>
+        </div>
+        <button class="drawer-close-btn" id="close-wishlist-btn" aria-label="Close Wishlist">&times;</button>
+      </div>
+
+      <div class="drawer-body" id="wishlist-items-container">
+        <!-- Wishlist items dynamically populated -->
+      </div>
+
+      <div class="drawer-footer" id="wishlist-footer">
+        <button class="btn btn-primary w-100" id="move-all-to-cart-btn">Move All to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shopping Cart Slide-out Drawer -->
+  <div class="drawer-backdrop" id="cart-drawer" aria-hidden="true">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div class="drawer-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <h3>Happy Birthday Cart (<span id="cart-items-count">0</span>)</h3>
+        </div>
+        <button class="drawer-close-btn" id="close-cart-btn" aria-label="Close Cart">&times;</button>
+      </div>
+
+      <!-- Free Shipping Goal Progress Bar -->
+      <div class="free-shipping-bar">
+        <div class="shipping-text" id="shipping-progress-text">Add $50 more for FREE Gold Delivery</div>
+        <div class="progress-track">
+          <div class="progress-fill" id="shipping-progress-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Cart Items List -->
+      <div class="drawer-body" id="cart-items-list">
+        <!-- Cart items rendered dynamically -->
+      </div>
+
+      <!-- Cart Summary & Actions -->
+      <div class="drawer-footer" id="cart-footer">
+        <!-- Promo Code Input -->
+        <div class="promo-box-small">
+          <div class="promo-input-row">
+            <input type="text" id="promo-input" placeholder="Promo code (try 'KENEIBDAY')" aria-label="Discount code">
+            <button class="btn btn-secondary btn-sm" id="apply-promo-btn">Apply</button>
+          </div>
+          <div class="promo-message" id="promo-message" style="display:none;"></div>
+        </div>
+
+
+        <!-- Calculations breakdown -->
+        <div class="cart-totals">
+          <div class="total-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">Priceless</span>
+          </div>
+          <div class="total-row discount-row" id="cart-discount-row" style="display:none;">
+            <span>Birthday Perk</span>
+            <span id="cart-discount">VIP</span>
+          </div>
+          <div class="total-row">
+            <span>Celebration Packaging & Delivery</span>
+            <span id="cart-shipping">Free</span>
+          </div>
+          <div class="total-row grand-total">
+            <span>Grand Total</span>
+            <span id="cart-total">Priceless</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-lg w-100 checkout-btn" id="open-checkout-btn">
+          <span>Proceed to Celebration Checkout</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Celebration Checkout Modal -->
+  <div class="modal-backdrop" id="checkout-modal" aria-hidden="true">
+    <div class="modal-dialog modal-checkout">
+      <button class="modal-close-btn" id="close-checkout-btn" aria-label="Close Checkout">&times;</button>
+      
+      <div class="modal-body checkout-content" id="checkout-step-1">
+        <div class="checkout-header text-center">
+          <div class="checkout-step-indicator">
+            <span class="step-pill active">1. Delivery</span>
+            <span class="step-sep">&rarr;</span>
+            <span class="step-pill">2. Payment</span>
+            <span class="step-sep">&rarr;</span>
+            <span class="step-pill">3. Celebrate!</span>
+          </div>
+          <h2>Birthday Delivery Details</h2>
+          <p>Where and when should we deliver Kenei's celebration order?</p>
+        </div>
+
+        <form id="checkout-form" class="checkout-form">
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label for="cust-name">Recipient / Order Name</label>
+              <input type="text" id="cust-name" value="Kenei (Birthday Special)" required>
+            </div>
+            <div class="form-group flex-1">
+              <label for="cust-email">Contact Email</label>
+              <input type="email" id="cust-email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cust-address">Delivery Address</label>
+            <input type="text" id="cust-address" placeholder="123 Celebration Boulevard, Suite 500" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label for="delivery-date">Birthday Delivery Date</label>
+              <input type="date" id="delivery-date" required>
+            </div>
+            <div class="form-group flex-1">
+              <label for="delivery-slot">Delivery Time Slot</label>
+              <select id="delivery-slot" class="custom-select" required>
+                <option value="morning">Morning Surprise (09:00 AM - 12:00 PM)</option>
+                <option value="afternoon">Afternoon Gala (01:00 PM - 05:00 PM)</option>
+                <option value="midnight" selected>Party Night Special (06:00 PM - 09:00 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="surprise-delivery-checkbox" checked>
+              <span>🎁 Keep this order a surprise delivery for Kenei!</span>
+            </label>
+          </div>
+
+          <div class="form-section-divider"></div>
+
+          <h3>Payment Method</h3>
+          <div class="payment-method-selector">
+            <label class="payment-option selected">
+              <input type="radio" name="payment-method" value="card" checked>
+              <div class="payment-content">
+                <span class="pay-icon">💳</span>
+                <span>Credit / Debit Card</span>
+              </div>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment-method" value="applepay">
+              <div class="payment-content">
+                <span class="pay-icon">🍏</span>
+                <span>Apple / Google Pay</span>
+              </div>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment-method" value="giftcard">
+              <div class="payment-content">
+                <span class="pay-icon">🎟️</span>
+                <span>Birthday Gift Voucher</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="card-details-box" id="card-fields">
+            <div class="form-group">
+              <label>Card Number</label>
+              <input type="text" placeholder="4242 &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 4242" value="4532 8920 1928 4402">
+            </div>
+            <div class="form-row">
+              <div class="form-group flex-1">
+                <label>Expiry Date</label>
+                <input type="text" placeholder="MM/YY" value="12/28">
+              </div>
+              <div class="form-group flex-1">
+                <label>CVC</label>
+                <input type="text" placeholder="123" value="789">
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-footer">
+            <div class="checkout-order-total">
+              <span>Total:</span>
+              <strong id="checkout-total-display">Priceless</strong>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" id="confirm-order-btn">
+              <span>Complete & Celebrate Kenei! 🎉</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Success Celebration Receipt (Step 3) -->
+      <div class="modal-body checkout-success" id="checkout-step-success" style="display:none;">
+        <div class="success-icon-wrap">
+          <div class="pulse-ring"></div>
+          <span class="party-emoji">🎂🎉</span>
+        </div>
+        <h2>Happy Birthday Kenei!</h2>
+        <p class="success-lead">Your celebration order has been placed with utmost care & affection!</p>
+        
+        <div class="order-receipt-card">
+          <div class="receipt-row">
+            <span>Order Number:</span>
+            <strong id="receipt-order-id">#HBK-2026-9842</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Recipient:</span>
+            <strong id="receipt-recipient">Kenei</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Delivery Date:</span>
+            <strong id="receipt-date">October 28, 2026</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Total Paid:</span>
+            <strong id="receipt-total" class="highlight-gold">$0.00</strong>
+          </div>
+        </div>
+
+        <p class="receipt-note">A confirmation email and tracking link have been dispatched. Kenei is going to love this celebration!</p>
+
+        <div class="success-actions">
+          <button class="btn btn-primary" id="continue-shopping-btn">Explore More Gifts</button>
+          <button class="btn btn-secondary celebrate-trigger-btn" id="more-confetti-btn">Blast More Fireworks! 🎆</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Bottom Options Bar: Home, Your Quotes, Bikramghar gang -->
+  <footer class="site-footer-options" id="bottom-options">
+    <div class="container footer-options-container">
+      <nav class="bottom-nav-options" aria-label="Bottom Navigation">
+        <a href="#hero" class="bottom-option-btn" id="opt-home">
+          <span class="option-icon">🏠</span>
+          <span class="option-label">Home</span>
+        </a>
+        <a href="quotes.html" class="bottom-option-btn" id="opt-quotes">
+          <span class="option-icon">💬</span>
+          <span class="option-label">Your Quotes</span>
+        </a>
+        <a href="bikramghar.html" class="bottom-option-btn" id="opt-bikramghar">
+          <span class="option-icon">👑</span>
+          <span class="option-label">Bikramghar gang</span>
+        </a>
+        <a href="bonus.html" class="bottom-option-btn" id="opt-bonus">
+          <span class="option-icon">🎁</span>
+          <span class="option-label">Bonus</span>
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Floating Celebration Button -->
+  <button class="floating-celebrate-fab celebrate-trigger-btn" id="floating-confetti-btn" title="Celebrate Kenei!" aria-label="Pop Confetti">
+    <span class="fab-icon">🎉</span>
+    <span class="fab-text">Celebrate!</span>
+  </button>
+
+  <!-- Script -->
+  <script src="app.js"></script>
+</body>
+</html>

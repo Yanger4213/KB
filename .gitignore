@@ -1,0 +1,8 @@
+# Dependencies
+node_modules/
+.vercel/
+
+# Temporary / Scratch scripts
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIYA ASE KUA | Happy Birthday Kenei</title>
+  <meta name="description" content="BIYA ASE KUA - The official celebration quote from the Bikramghar Gang for Kenei!">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="quotes-page-body">
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="quotes-glow-orb orb-1"></div>
+  <div class="quotes-glow-orb orb-2"></div>
+
+  <main class="quotes-page-container">
+    <div class="quotes-card-wrap">
+      <!-- Gang Badge Header -->
+      <div class="gang-badge-pill">
+        📍 BIKRAMGHAR GANG &bull; EXCLUSIVE BIRTHDAY INQUIRY
+      </div>
+
+      <div class="floating-icons-banner">
+        <span>👑</span>
+        <span>🎂</span>
+        <span>🥂</span>
+        <span>✨</span>
+        <span>🎉</span>
+      </div>
+
+      <!-- VERY LARGE FONT STATEMENT -->
+      <div class="giant-quote-box">
+        <h1 class="giant-biya-text">
+          BIYA ASE KUA
+        </h1>
+      </div>
+
+      <p class="quotes-subtext">
+        The number one, most critical, and legendary question of the century from the <strong>Bikramghar Gang</strong> to our birthday king, <strong>Kenei</strong>! 😂🔥
+      </p>
+
+      <div class="quotes-action-group">
+        <a href="index.html" class="btn btn-primary btn-lg">
+          <span>← Back to Store</span>
+        </a>
+        <a href="bikramghar.html" class="btn btn-secondary btn-lg">
+          <span>👑 Gang Photo Gallery</span>
+        </a>
+        <button class="btn btn-secondary btn-lg celebrate-trigger-btn" id="biya-blast-btn">
+          <span>🎉 Pop Fireworks!</span>
+        </button>
+      </div>
+
+      <div class="quotes-signature">
+        <span>With endless love & adda vibes &bull; <strong>The Bikramghar Gang</strong> 👑</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bottom Options Bar: Home, Your Quotes, Bikramghar gang -->
+  <footer class="site-footer-options" id="bottom-options">
+    <div class="container footer-options-container">
+      <nav class="bottom-nav-options" aria-label="Bottom Navigation">
+        <a href="index.html" class="bottom-option-btn" id="opt-home">
+          <span class="option-icon">🏠</span>
+          <span class="option-label">Home</span>
+        </a>
+        <a href="quotes.html" class="bottom-option-btn active" id="opt-quotes">
+          <span class="option-icon">💬</span>
+          <span class="option-label">Your Quotes</span>
+        </a>
+        <a href="bikramghar.html" class="bottom-option-btn" id="opt-bikramghar">
+          <span class="option-icon">👑</span>
+          <span class="option-label">Bikramghar gang</span>
+        </a>
+        <a href="bonus.html" class="bottom-option-btn" id="opt-bonus">
+          <span class="option-icon">🎁</span>
+          <span class="option-label">Bonus</span>
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Auto-fire celebratory confetti and chime when page loads
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        if (typeof confetti !== 'undefined') {
+          confetti.rain();
+        }
+        if (typeof audioPlayer !== 'undefined') {
+          audioPlayer.playChime();
+        }
+      }, 400);
+    });
+  </script>
+</body>
+</html>

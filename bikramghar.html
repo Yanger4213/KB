@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bikramghar Gang Gallery | Happy Birthday Kenei</title>
+  <meta name="description" content="Official photo showcase of the legendary Bikramghar Gang celebrating Kenei's birthday with 10 memorable moments.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bikramghar-page-body">
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="quotes-glow-orb orb-1"></div>
+  <div class="quotes-glow-orb orb-2"></div>
+
+  <!-- Header Navigation -->
+  <header class="gang-page-header">
+    <div class="container gang-nav-container">
+      <a href="index.html" class="gang-back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Back to Store</span>
+      </a>
+
+      <div class="gang-header-actions">
+        <a href="quotes.html" class="btn btn-secondary btn-sm">
+          <span>💬 Your Quotes</span>
+        </a>
+        <a href="bonus.html" class="btn btn-secondary btn-sm">
+          <span>🎁 Bonus</span>
+        </a>
+        <button class="btn btn-primary btn-sm celebrate-trigger-btn" id="gang-confetti-btn">
+          <span>🎉 Pop Fireworks!</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="gang-main-content">
+    <div class="container">
+      <!-- Title & Hero Tribute Banner -->
+      <section class="gang-hero-section text-center">
+        <div class="gang-badge-pill">
+          📍 BIKRAMGHAR GANG &bull; BROTHERHOOD PHOTO ARCHIVE
+        </div>
+        
+        <div class="gang-crest-emojis">👑🔥📸</div>
+        <h1 class="gang-title">Bikramghar Gang Showcase</h1>
+        <p class="gang-tagline">“Brothers by vibe, legends by choice &bull; 10 Moments Celebrating Kenei”</p>
+      </section>
+
+      <!-- 10 Images Grid Showcase -->
+      <section class="gang-gallery-section">
+        <div class="gang-gallery-grid" id="gang-gallery-grid">
+          <!-- Item 1 -->
+          <article class="gang-photo-card" data-index="1">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#1</span>
+              <img src="assets/images/gang-1.jpg" onerror="this.onerror=null; this.src='assets/images/gang-1.svg';" alt="Bikramghar Gang Moment 1" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Moment 1</h3>
+            </div>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="gang-photo-card" data-index="2">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#2</span>
+              <img src="assets/images/gang-2.jpg" onerror="this.onerror=null; this.src='assets/images/gang-2.svg';" alt="Bikramghar Gang Moment 2" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Moment 2</h3>
+            </div>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="gang-photo-card" data-index="3">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#3</span>
+              <img src="assets/images/gang-3.jpg" onerror="this.onerror=null; this.src='assets/images/gang-3.svg';" alt="Bikramghar Gang Moment 3" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Moment 3</h3>
+            </div>
+          </article>
+
+          <!-- Item 4 -->
+          <article class="gang-photo-card" data-index="4">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#4</span>
+              <img src="assets/images/gang-4.jpg" onerror="this.onerror=null; this.src='assets/images/gang-4.svg';" alt="Bikramghar Gang Moment 4" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Moment 4</h3>
+            </div>
+          </article>
+
+          <!-- Item 5 -->
+          <article class="gang-photo-card" data-index="5">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#5</span>
+              <img src="assets/images/gang-5.jpg" onerror="this.onerror=null; this.src='assets/images/gang-5.svg';" alt="Bikramghar Gang Moment 5" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Moment 5</h3>
+            </div>
+          </article>
+
+          <!-- Item 6 -->
+          <article class="gang-photo-card" data-index="6">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#6</span>
+              <img src="assets/images/gang-6.jpg" onerror="this.onerror=null; this.src='assets/images/gang-6.svg';" alt="Bikramghar Gang Moment 6" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Moment 6</h3>
+            </div>
+          </article>
+
+          <!-- Item 7 -->
+          <article class="gang-photo-card" data-index="7">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#7</span>
+              <img src="assets/images/gang-7.jpg" onerror="this.onerror=null; this.src='assets/images/gang-7.svg';" alt="Bikramghar Gang Moment 7" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Moment 7</h3>
+            </div>
+          </article>
+
+          <!-- Item 8 -->
+          <article class="gang-photo-card" data-index="8">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#8</span>
+              <img src="assets/images/gang-8.jpg" onerror="this.onerror=null; this.src='assets/images/gang-8.svg';" alt="Bikramghar Gang Moment 8" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Moment 8</h3>
+            </div>
+          </article>
+
+          <!-- Item 9 -->
+          <article class="gang-photo-card" data-index="9">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#9</span>
+              <img src="assets/images/gang-9.jpg" onerror="this.onerror=null; this.src='assets/images/gang-9.svg';" alt="Bikramghar Gang Moment 9" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Moment 9</h3>
+            </div>
+          </article>
+
+          <!-- Item 10 -->
+          <article class="gang-photo-card" data-index="10">
+            <div class="photo-frame">
+              <span class="photo-pill-badge">#10</span>
+              <img src="assets/images/gang-10.jpg" onerror="this.onerror=null; this.src='assets/images/gang-10.svg';" alt="Bikramghar Gang Moment 10" class="gallery-photo-img" loading="lazy">
+            </div>
+            <div class="photo-card-caption">
+              <h3>Moment 10</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Bottom Gang Tribute -->
+      <section class="gang-footer-tribute text-center">
+        <div class="gang-tribute-inner">
+          <h2>Forever Bikramghar &bull; Long Live Kenei!</h2>
+          <p>From late-night addas to unforgettable brotherhood milestones. Here's to making countless more memories together!</p>
+          <div class="gang-action-btns">
+            <a href="index.html" class="btn btn-primary btn-lg">
+              <span>← Back to Celebration Boutique</span>
+            </a>
+            <a href="quotes.html" class="btn btn-secondary btn-lg">
+              <span>💬 Read The Iconic Quote</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Bottom Options Bar: Home, Your Quotes, Bikramghar gang, Bonus -->
+  <footer class="site-footer-options" id="bottom-options">
+    <div class="container footer-options-container">
+      <nav class="bottom-nav-options" aria-label="Bottom Navigation">
+        <a href="index.html" class="bottom-option-btn" id="opt-home">
+          <span class="option-icon">🏠</span>
+          <span class="option-label">Home</span>
+        </a>
+        <a href="quotes.html" class="bottom-option-btn" id="opt-quotes">
+          <span class="option-icon">💬</span>
+          <span class="option-label">Your Quotes</span>
+        </a>
+        <a href="bikramghar.html" class="bottom-option-btn active" id="opt-bikramghar">
+          <span class="option-icon">👑</span>
+          <span class="option-label">Bikramghar gang</span>
+        </a>
+        <a href="bonus.html" class="bottom-option-btn" id="opt-bonus">
+          <span class="option-icon">🎁</span>
+          <span class="option-label">Bonus</span>
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Confetti button
+    const confettiBtn = document.getElementById('gang-confetti-btn');
+    if (confettiBtn) {
+      confettiBtn.addEventListener('click', () => {
+        if (typeof confetti !== 'undefined') confetti.rain();
+        if (typeof audioPlayer !== 'undefined') audioPlayer.playPop();
+      });
+    }
+
+    // Auto celebration burst on page entry
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        if (typeof confetti !== 'undefined') confetti.rain();
+        if (typeof audioPlayer !== 'undefined') audioPlayer.playChime();
+      }, 350);
+    });
+  </script>
+</body>
+</html>
